@@ -1,0 +1,43 @@
+@startuml
+!include style.puml
+skinparam arrowThickness 1.1
+skinparam arrowColor STORAGE_COLOR
+skinparam classBackgroundColor STORAGE_COLOR
+
+package Storage as StoragePackage {
+
+package "UserPrefs Storage" #F4F6F6{
+Class "<<interface>>\nUserPrefsStorage" as UserPrefsStorage
+Class JsonUserPrefsStorage
+}
+
+Class "<<interface>>\nStorage" as Storage
+Class StorageManager
+
+package "CodeConnect Storage" #F4F6F6{
+Class "<<interface>>\nCodeConnectStorage" as CodeConnectStorage
+Class JsonCodeConnectStorage
+Class JsonSerializableCodeConnect
+Class JsonAdaptedContact
+Class JsonAdaptedTag
+}
+
+}
+
+Class HiddenOutside #FFFFFF
+HiddenOutside ..> Storage
+
+StorageManager .up.|> Storage
+StorageManager -up-> "1" UserPrefsStorage
+StorageManager -up-> "1" CodeConnectStorage
+
+Storage -left-|> UserPrefsStorage
+Storage -right-|> CodeConnectStorage
+
+JsonUserPrefsStorage .up.|> UserPrefsStorage
+JsonCodeConnectStorage .up.|> CodeConnectStorage
+JsonCodeConnectStorage ..> JsonSerializableCodeConnect
+JsonSerializableCodeConnect --> "*" JsonAdaptedContact
+JsonAdaptedContact --> "*" JsonAdaptedTag
+
+@enduml
