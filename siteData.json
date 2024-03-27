@@ -52,6 +52,7 @@
         "common-classes": "Common classes",
         "implementation": "Implementation",
         "command-history-feature": "Command history feature",
+        "send-email-directly-feature": "Send email directly feature",
         "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
         "proposed-data-archiving": "[Proposed] Data archiving",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
@@ -109,13 +110,18 @@
       "title": "User Guide",
       "headings": {
         "codeconnect-user-guide": "CodeConnect User Guide",
-        "quick-start": "Quick start",
+        "what-can-codeconnect-do-for-you": "What can CodeConnect do for you?",
+        "table-of-contents": "Table of Contents",
+        "introduction": "Introduction",
+        "usage-of-user-guide": "Usage of User Guide",
+        "key-notes": "Key Notes:",
+        "installation-guide": "Installation Guide",
         "features": "Features",
         "commands": "Commands",
         "other-features": "Other features",
         "faq": "FAQ",
-        "known-issues": "Known issues",
-        "command-summary": "Command summary"
+        "known-issues": "Known Issues",
+        "command-summary": "Command Summary"
       },
       "headingKeywords": {}
     },
